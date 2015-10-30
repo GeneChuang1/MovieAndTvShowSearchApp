@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logo2"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/tv_show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the name of the tv show below:"/>
+
+    <EditText
+        android:id="@+id/et_show_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_show_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the year the television show below:"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/et_show_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/search_button_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Search"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

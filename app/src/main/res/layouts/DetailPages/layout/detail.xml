@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/detail_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dip"
+                android:text="Back" />
+
+            <!-- Thumbnail Image -->
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/detail_thumbnail"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1">
+
+            <!-- MovieClass Information -->
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title:"
+                    android:textSize="@dimen/dimen_style1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Title"
+                    android:textSize="@dimen/dimen_style1"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dip"
+                    android:text="Year:"
+                    android:textSize="@dimen/dimen_style2" />
+
+                <TextView
+                    android:id="@+id/detail_year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dip"
+                    android:text="Year"
+                    android:textSize="@dimen/dimen_style2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_rated"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Rated:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_rated"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Rated"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_released"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Released Date:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_released"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Released"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_runtime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Length of Movie:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_runtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Runtime"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_genre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Genre:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Genre"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_director"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Director:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_director"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Director"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_writer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Writers:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_writer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Writer"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_actors"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Actors:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/details_actors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Actors"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_plot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Plot:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/details_plot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Plot"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_language"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Languages:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Language"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_country"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Countries:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Country"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_awards"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Awards:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_awards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Awards"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_metascore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Metascore:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_metascore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Metascore"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_imdb_rating"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IMDB Rating:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_imdb_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IMDB Rating"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_imdb_votes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IMDB Votes:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_imdb_votes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IMDB Votes"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_imdb_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IMDB ID:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_imdb_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="IMDB ID"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Type:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Type"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_response"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Response:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_response"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Response"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_viewed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Viewed Before:"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+
+                <TextView
+                    android:id="@+id/detail_viewed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Haven't Viewed Yet"
+                    android:textColor="@color/color_style1"
+                    android:textSize="@dimen/dimen_style3" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
