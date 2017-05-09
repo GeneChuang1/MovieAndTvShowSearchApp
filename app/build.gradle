@@ -19,7 +19,7 @@ android {
     }
     sourceSets {
         main {
-            res.srcDirs = ['src/main/res/layouts/detail_pages',
+            res.srcDirs = ['src/main/res/layouts/DetailPages',
                            'src/main/res/layouts/ListViewPages',
                            'src/main/res/layouts/UserInputPages',
                            'src/main/res/layouts',
