@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.sample.genechuang.movieandtvsearch.ListViewPages.ImageUtilities.AppController;
 import com.sample.genechuang.movieandtvsearch.R;
+import com.sample.genechuang.movieandtvsearch.Utilities.ServiceHandler;
 import com.sample.genechuang.movieandtvsearch.VariablesAndSettings.JSON_Tags;
 import com.sample.genechuang.movieandtvsearch.VariablesAndSettings.SavedUserSearch;
 
@@ -128,7 +129,7 @@ public class Frag_TvShowsList extends Fragment {
         tvShowName = SavedUserSearch.getInstance().getTvShowsName();
         tvShowYear = SavedUserSearch.getInstance().getTvShowsYear();
 
-        listOfTvShowsString = baseString+ "s="+ tvShowName +"&y="+ tvShowYear +"&plot=full"+"&r=json"+ "&type=series";
+        listOfTvShowsString = baseString+ "s="+ tvShowName +"&y="+ tvShowYear +"&plot=full"+"&r=json"+ "&type=series"+ ServiceHandler.apiKey;
     }
 
     @Override

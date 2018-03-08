@@ -35,6 +35,7 @@ public class TvShow_CustomOnClickListener implements View.OnClickListener {
 
         Intent newPage = new Intent(mActivity.getApplicationContext(), Act_DetailsPage.class);
         newPage.putExtra(JSON_Tags.TAG_ID, imdbID);
+        mActivity.finish();
         mActivity.startActivity(newPage);
     }
 }

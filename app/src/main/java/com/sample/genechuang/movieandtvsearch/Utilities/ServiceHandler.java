@@ -21,6 +21,7 @@ import java.util.List;
 public class ServiceHandler {
 
     static String response = null;
+    public static String apiKey= "&apikey=bc6b24d6";
     public final static int GET = 1;
     public final static int POST = 2;
 

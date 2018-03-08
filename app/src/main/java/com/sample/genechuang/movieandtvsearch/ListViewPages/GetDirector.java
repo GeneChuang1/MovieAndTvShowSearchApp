@@ -21,7 +21,7 @@ public class GetDirector {
 
     public GetDirector(String imdbID) throws ExecutionException, InterruptedException {
         id= imdbID;
-        finalURL = baseURL + id + "&plot=full&r=json";
+        finalURL = baseURL + id + "&plot=full&r=json"+ ServiceHandler.apiKey;
         //System.out.println("GetDirector. finalURL= " + finalURL);
         theDirector = new GetDirectorInfo().execute().get();
     }

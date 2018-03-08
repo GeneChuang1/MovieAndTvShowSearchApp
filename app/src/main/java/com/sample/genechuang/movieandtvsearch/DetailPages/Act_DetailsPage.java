@@ -71,7 +71,7 @@ public class Act_DetailsPage extends Activity {
             System.out.println("Act_DetailsPage. imdbID= " + imdbID);
         }
 
-        finalURL = baseURL + imdbID + "&plot=full&r=json";
+        finalURL = baseURL + imdbID + "&plot=full&r=json"+ ServiceHandler.apiKey;
         System.out.println("Act_DetailsPage. finalURL= " + finalURL);
 
         poster = (NetworkImageView) findViewById(R.id.detail_thumbnail);
