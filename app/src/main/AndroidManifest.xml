@@ -4,14 +4,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".ListViewPages.ImageUtilities.AppController"
+        android:name=".View.ListViewPages.ImageUtilities.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".UserInputPages.Act_UserInputPages"
+            android:name=".View.UserInputPages.Act_UserInputPages"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -21,12 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailPages.Act_DetailsPage"
+            android:name=".View.DetailPages.Act_DetailsPage"
             android:label="Details Page" >
         </activity>
         <activity
-            android:name=".ListViewPages.Act_ListView"
+            android:name=".View.ListViewPages.Act_ListView"
             android:label="ListViews" >
         </activity>
+        <activity android:name=".View.ListViewPages.Act_NoResult" />
     </application>
 </manifest>
